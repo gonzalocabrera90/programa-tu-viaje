@@ -3,7 +3,9 @@
     padding: 0;
 }
 
-
+img{
+    object-fit: contain;
+}
 /* HEADER */
 header{
     width: 100%;
@@ -27,7 +29,7 @@ header{
     color: orange;
 }
 .logo h1{
-   color: beige;
+   color: rgb(61, 61, 59);
 }
 .links{
     display:flex;
@@ -36,26 +38,158 @@ header{
 }
 a {
     text-decoration: none;
-    color: beige;
+    color: rgb(61, 61, 59);
     font-size: 1.2em;
 }
 
 /* CONTENT */
+/* PORTADA */
+
+
+/* PROVINCIAS */
+.provincias{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+ }
+.provincias-content{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .provincia{
+    width: 20vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.provincia-imagen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
+}
+.provincia-imagen img{
+    object-fit: contain;
+}
+
+/* VIAJES */
+.viajes{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+ }
+.viajes-content{
+    height: 90vh;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .viaje{
+    width: 18vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.viaje-imagen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
+}
+.viaje-imagen img{
+    object-fit: contain;
+}
+
+
+
+/* SERVICIOS */
+.servicios{
+    height: 60vh;
+    position: relative;
+}
+.servicios-portada{
+    height: 100%;
+}
+.servicios-portada img{
+    object-fit: contain;
+}
+.servicios-head{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    font-size: 3em;
+}
+.servicios-content{
+    width: 100%;
+    height: 42vw;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.servicios-item{
+    width: 28%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   background-color: #1E1E1E66;
+}
+.servicios-item p{
+   color: white;
+   font-size: 10px;
+}
+
+
+/* PROMOTORES */
 .promotores-content{
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
  }
 .promotor{
     width: 28%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;   
 }
 .promotor-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
 }
 .promotor-imagen img{
     object-fit: contain;
@@ -103,6 +237,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 .data-user-uno{
     width: 80%;
@@ -128,11 +263,25 @@ input{
 .enviar-content{
     width: 80%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 button.enviar {
     width: 30%;
     height: 30px;
+}
+.red-warning{
+    color: red;
+}
+.bi-dash-circle-fill{
+    color: red;
+}
+
+.green-check{
+    color: green;
+}
+.bi-check-circle-fill{
+    color: green;
 }
 img{
     width: 100%;
@@ -173,4 +322,23 @@ input{
 footer{
     height: 60vh;
     background-color: rgb(34, 31, 31);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-copyright p,.footer-nav .links a,.footer-nav .logo h1{
+    color: white;
 }
