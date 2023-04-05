@@ -1,0 +1,17 @@
+[
+    {
+        "ciudad": "Buenos Aires",
+        "descripcion": "Recorre las principales atracciones durante 5 dias. Difruta de una gastronomia unica en el mundo.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEI_TMk31oOuQJpF_uq4M1_-ckow5r7lms8nUL9CgdyuIyvrOumLG2Qrm-t5Mp7BlOaBk&usqp=CAU"
+    },
+    {
+        "ciudad": "Glaciar Perito Moreno",
+        "descripcion": "Comparti un viaje unico a lo largo de la Patagonia Argentina. Region que cuenta con los paisajes mas hermosos del mundo.",
+        "imagen": "https://ak-d.tripcdn.com/images/10081e000001fuo62152A_W_400_10000_R5_Q90.jpg"
+    },
+    {
+        "ciudad": "Cordoba de las Cascadas",
+        "descripcion": "Disfruta de los hermosos paisajes que se ofrecen a lo largo y ancho de la provincia. Alojate en hoteles de primer nivel con vista a las sierras cordobesas.",
+        "imagen": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1592489358884-49ddd6f3a48a"
+    }
+]

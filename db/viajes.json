@@ -1,0 +1,37 @@
+[
+    {
+        "ciudad": "Buenos Aires",
+        "descripcion": "Recorre las principales atracciones durante 5 dias. Difruta de una gastronomia unica en el mundo.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEI_TMk31oOuQJpF_uq4M1_-ckow5r7lms8nUL9CgdyuIyvrOumLG2Qrm-t5Mp7BlOaBk&usqp=CAU",
+        "precio": 550,
+        "estadia": 5
+    },
+    {
+        "ciudad": "Cataratas de Iguazu",
+        "descripcion": "Recorre las principales atracciones durante 5 dias. Difruta de una gastronomia unica en el mundo.",
+        "imagen": "https://i.pinimg.com/236x/35/fb/9f/35fb9f19345f7548799a6429b0617442--voi-jehovah.jpg",
+        "precio": 800,
+        "estadia": 5
+    },
+    {
+        "ciudad": "Bariloche",
+        "descripcion": "Recorre las principales atracciones durante 5 dias. Difruta de una gastronomia unica en el mundo.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_838263-MLA52749180297_122022-O.jpg",
+        "precio": 1110,
+        "estadia": 5
+    },
+    {
+        "ciudad": "Ushuaia",
+        "descripcion": "Recorre las principales atracciones durante 5 dias. Difruta de una gastronomia unica en el mundo.",
+        "imagen": "https://pbs.twimg.com/media/FloCuZEWIAAGBx2.jpg",
+        "precio": 1000,
+        "estadia": 5
+    },
+    {
+        "ciudad": "Salta",
+        "descripcion": "Recorre las principales atracciones durante 5 dias. Difruta de una gastronomia unica en el mundo.",
+        "imagen": "https://www.laotravozdigital.com/altervox/wp-content/uploads/2012/04/arton2326.jpg",
+        "precio": 900,
+        "estadia": 5
+    }
+]

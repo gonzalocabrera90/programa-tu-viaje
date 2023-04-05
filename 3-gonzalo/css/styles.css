@@ -17,12 +17,14 @@ header{
     justify-content: space-between;
 }
 .logo{
-    margin-left: 20px;
     display: flex;
     gap: 10px;
     font-size: 14px;
     align-items: center;
     justify-content: space-between;
+}
+header .logo{
+    margin-left: 20px;
 }
 .logo i{
     font-size: 28px;
@@ -39,12 +41,18 @@ header{
 a {
     text-decoration: none;
     color: rgb(61, 61, 59);
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 /* CONTENT */
 /* PORTADA */
-
+.portadaa {
+    position: relative;
+    background-color: #af9272;
+}
+.portada img{
+    width: 100%;
+}
 
 /* PROVINCIAS */
 .provincias{
@@ -79,6 +87,7 @@ a {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
 }
 .provincia-imagen img{
+    width: 100%;
     object-fit: contain;
 }
 
@@ -92,6 +101,7 @@ a {
  }
 .viajes-content{
     height: 90vh;
+    width: 80%;
     display: flex;
     gap: 2vw;
     align-items: center;
@@ -115,6 +125,7 @@ a {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
 }
 .viaje-imagen img{
+    width: 100%;
     object-fit: contain;
 }
 
@@ -122,61 +133,108 @@ a {
 
 /* SERVICIOS */
 .servicios{
-    height: 60vh;
+    position: static;
+    height: 80vh;
+}
+.aaa{
+    height: 80vh;
     position: relative;
 }
 .servicios-portada{
     height: 100%;
 }
 .servicios-portada img{
-    object-fit: contain;
+    object-fit: cover;
+    height: 100%;
+    width: -webkit-fill-available;
 }
 .servicios-head{
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
     display: flex;
     flex-direction: column;
     align-items: center;
     color:white;
     font-size: 3em;
+    text-shadow: -3px 5px 5px black
 }
 .servicios-content{
-    width: 100%;
-    height: 42vw;
+    width: 80%;
+    height: 48%;
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .servicios-item{
     width: 28%;
     height: 80%;
+    font-size: 1.1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
    background-color: #1E1E1E66;
+   border-radius: 8px;
+   box-shadow: 0 0 10px white;
+   text-align: center;
 }
+.servicios-item h3{
+    color: white;
+    font-size: 2vw;
+ }
+
 .servicios-item p{
    color: white;
-   font-size: 10px;
+   font-size: 1.4vw;
 }
+@media screen and (max-width: 800px) {
+    header {
+        justify-content: center;
+    }
+    .logo i{
+        font-size: 3.5vw;    }
+    .logo h1{
+        font-size: 3.5vw;
+    }
+    .links {
+        display: none;
+    }
+    .servicios-content{
+        width: 100%;
+    }
+    .servicios-item h3{
+        font-size: 2.5vw;
+     }
+     .servicios-item p{
+        font-size: 2vw;
+     }
+ }
 
 
 /* PROMOTORES */
-.promotores-content{
+.promotores{
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
  }
-.promotor{
+ .promotores-content{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+
+ .promotor{
     width: 28%;
     height: 80%;
     display: flex;
@@ -192,36 +250,11 @@ a {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
 }
 .promotor-imagen img{
+    width: 100%;
     object-fit: contain;
     border-radius: 50%;
 
 }
-/* .promotores-content{
-   height: 80vh;
-}
-.promotor{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.promotor-imagen {
-    width:100%;
-    border-radius: 50%;
-}
-.portada{
-    width: 100vw;
-    height: 80vh;
-}
-.portada img{
-    width: 100%;
-    height: auto;
-}
-.promotor-imagen img{
-    width: 100%;
-    border-radius: 50%;
-    height: auto;
-} */
 
 /* FORMULARIO */
 .formulario{
@@ -232,13 +265,19 @@ a {
     justify-content: space-evenly;
 }
 .formulario-content{
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
+@media screen and (max-width:800px) {
+    .promotores-content, .viajes-content, .formulario-content{
+        width: 100%;
+    }
+}
+
 .data-user-uno{
     width: 80%;
     display: flex;
@@ -254,7 +293,7 @@ a {
     display: flex;
     flex-direction: column;
 }
-input{
+input, select{
     width: 100%;
     height: 30px;
     border: none;
@@ -283,41 +322,12 @@ button.enviar {
 .bi-check-circle-fill{
     color: green;
 }
-img{
-    width: 100%;
-}
-/* .formulario{
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.formulario-content{
-    width: 80%;
-    height: 80%;
-}
-.data-user-uno{
-    width: 100%;
-    display: flex;
-    gap: 10px;
-}
-.data-user-uno-content input{
-    width: 100%;
-}
-.data-user-uno-content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
 
-input{
-    width: 100%;
-    height: 60px;
-} */
-
-
+/* API */
+#map {
+    width: 300px;
+    height: 60vh;
+  }
 /* FOOTER */
 footer{
     height: 60vh;
@@ -326,6 +336,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 0 35px rgb(0, 0, 0);
 }
 .footer-nav{
     display: flex;

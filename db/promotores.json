@@ -1,0 +1,24 @@
+[
+    {
+        "nombre":"Daniel",
+        "apellido":"Scheurer",
+        "provincia":"Cordoba",
+        "profesion":"Licenciado en Adm. de Empresa",
+        "imagen": "https://threewill.com/wp-content/uploads/austin-ryan-full-resolution-office-365.jpg"
+    },
+    {
+        "nombre":"Melina",
+        "apellido":"Romero",
+        "provincia":"Catamarca",
+        "profesion":"Fotografa Profesional",
+        "imagen": "https://uploads-ssl.webflow.com/6321fa4eb9021afb4a237ebb/63518b3451899cb324570c0e_IMA0000460000046712.jpeg"
+    
+    },
+    {
+        "nombre":"Gonzalo",
+        "apellido":"Cabrera",
+        "provincia":"Buenos Aires",
+        "profesion":"Licenciado en Turismo",
+        "imagen": "https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg"
+    }
+]
