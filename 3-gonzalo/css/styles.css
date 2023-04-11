@@ -40,7 +40,7 @@ header .logo {
     color: rgb(61, 61, 59);
 }
 
-.links {
+header .links {
     display: flex;
     gap: 15px;
     margin-right: 20px;
@@ -325,7 +325,7 @@ a {
         font-size: 3.5vw;
     }
 
-    .links {
+    header .links {
         display: none;
     }
 
@@ -458,9 +458,22 @@ select {
     justify-content: space-between;
 }
 
+button {
+    height: 30px;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.654);
+
+}
+
 button.enviar {
     width: 30%;
-    height: 30px;
+}
+
+button.contactarme {
+    width: 100%;
 }
 
 .red-warning {
@@ -487,6 +500,7 @@ button.enviar {
 
 /* FOOTER */
 footer {
+    font-size: 1.4em;
     height: 60vh;
     background-color: rgb(34, 31, 31);
     display: flex;
@@ -501,6 +515,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    font-size: 0.9em;
 }
 
 .footer-copyright {
@@ -514,6 +529,55 @@ footer {
 .footer-nav .links a,
 .footer-nav .logo h1 {
     color: white;
+}
+
+.name h1 {
+    font-size: 1.7em;
+}
+
+.footer-nav a {
+    font-size: 1em;
+}
+
+.footer-copyright p {
+    font-size: 0.6em;
+}
+
+.icons-red-social {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons-red-social .bi {
+    font-size: 32px;
+    color: aqua;
+}
+
+.icons-red-social .bi-github {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+}
+
+.icons-red-social .bi-instagram {
+    font-size: 32px;
+    color: #fc0170;
+}
+
+.icons-red-social .bi-facebook {
+    font-size: 32px;
+    color: blue;
+}
+
+.icons-red-social .bi-twitter {
+    font-size: 32px;
+    color: rgb(33, 244, 244);
+}
+
+.icons-red-social .bi-youtube {
+    font-size: 32px;
+    color: rgb(255, 0, 0);
 }
 
 @media screen and (max-width: 600px) {
@@ -537,5 +601,13 @@ footer {
 
     .servicios-item {
         justify-content: center;
+    }
+
+    .footer-nav a {
+        font-size: 0.8em;
+    }
+
+    .icons-red-social {
+        width: 60%;
     }
 }
