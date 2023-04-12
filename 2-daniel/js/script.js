@@ -7,7 +7,7 @@ const formWarning = document.getElementById('warning');
 const formSelect = document.getElementById('select-promotor');
 
 const datosRegistro = {}
-const recomenddos = document.querySelector('.provincias-content');
+const recomendados = document.querySelector('.recomendaciones-content');
 const viajesElement = document.querySelector('.viajes-content');
 const promotoresElement = document.getElementById('promotores');
 
@@ -18,13 +18,15 @@ fetch('../../db/recomendados.json')
     .then(cities => {
         console.log(cities);
         for (const city of cities) {
-            recomenddos.innerHTML += `
-                <div class="provincia">
-                    <div class="provincia-imagen">
+            recomendados.innerHTML += `
+                <div class="recomendacion">
+                    <div class="recomendacion-imagen">
                         <img src="${city.imagen}" alt="">
                     </div>
-                    <h3>${city.ciudad}</h3>
-                    <p>${city.descripcion}</p>
+                    <div class="recomendacion-descripcion">
+                        <h3>${city.ciudad}</h3>
+                        <p>${city.descripcion}</p>
+                    </div>
                 </div>
         `
         }
@@ -37,15 +39,23 @@ fetch('../../db/recomendados.json')
         for (const viaje of viajes) {
             viajesElement.innerHTML += `
             <div class="viaje">
-            <div class="viaje-imagen">
-                <img src="${viaje.imagen}"
-                    alt="">
-            </div>
-            <h3>${viaje.ciudad}</h3>
-            <p>${viaje.descripcion}</p>
-            <p>u$s${viaje.precio}</p>
-            <p>${viaje.estadia + 1} diás y ${viaje.estadia} noches.</p>
-        </div> 
+                <div class="viaje-imagen">
+                    <img src="${viaje.imagen}"
+                        alt="">
+                </div>
+                <div class="viaje-descripcion">
+                    <div class="viaje-head">
+                        <div>
+                            <h3>${viaje.ciudad}</h3>
+                        </div>
+                        <p>${viaje.descripcion}</p>
+                    </div>
+                    <ul class="viaje-items">
+                        <li>u$s${viaje.precio}</li>
+                        <li>${viaje.estadia + 1} diás y ${viaje.estadia} noches.</li>
+                    </ul>
+                </div>
+            </div> 
         `
         }
     })
@@ -54,7 +64,6 @@ fetch('../../db/recomendados.json')
 fetch('../../db/promotores.json')
 .then(data => data.json())
 .then(lista => {
-    console.log(lista);
     for (const item of lista) {
         promotoresElement.innerHTML += `
             <div class="promotor">
@@ -67,8 +76,8 @@ fetch('../../db/promotores.json')
                     <p>${item.profesion}</p>
                 </div>
                 <div>
-                <a href="#contactarme">
-                    <button type="button" class="contactarme" id="contactarme" name="${item.nombre}" onclick="setSelect(this.name)" >Contactarme</button>    
+                <a href="#info">
+                    <button class="contactarme" id="contactarme" name="${item.nombre}" onclick="setSelect(this.name)" >Contactarme</button>    
                 </a>
                 </div>
             </div>
@@ -77,7 +86,6 @@ fetch('../../db/promotores.json')
 })
 function setSelect(nombre){
     let nombreSelect = nombre.toLowerCase()
-    console.log(formSelect);
     formSelect.value = nombreSelect
 }
 formSubmit.addEventListener('click', function (event) {
@@ -98,7 +106,6 @@ formSubmit.addEventListener('click', function (event) {
         datosRegistro.apellido = ""
         datosRegistro.email = ""
     }
-    console.log(datosRegistro);
 })
 
 function myMap() {
