@@ -212,7 +212,7 @@ submitContacto.addEventListener('click', function () {
 // var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 // }
 
-const API = "http://api.weatherapi.com/v1/forecast.json?key=9a179446b6644d8ea15170701230604&q=Argentina&days=10&aqi=no&alerts=no"
+const API = "https://api.weatherapi.com/v1/forecast.json?key=9a179446b6644d8ea15170701230604&q= argentina buenos aires&days=10&aqi=no&alerts=no"
 const forecastElement = document.getElementById('pronostico')
 
 const posibilidades = ["Patchy rain possible", "Clear", "Partly cloudy", "Cloudy", "Mist", "Overcast", "Sunny", "Light rain shower", "Heavy rain", "Moderate rain", "Fog","Moderate or heavy rain shower", "Patchy light drizzle", "Light rain shower"]
