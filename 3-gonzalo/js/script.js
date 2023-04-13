@@ -82,7 +82,7 @@ fetch('/db/promotores.json')
                 <div class="promotor-imagen">
                     <img src="${item.imagen}" alt="">
                 </div>
-                <div>
+                <div class="promotor-descripcion" >
                     <h3>${item.nombre} ${item.apellido}</h3>
                     <p>Promotor de la provincia de ${item.provincia}</p>
                     <p>${item.profesion}</p>
@@ -190,7 +190,7 @@ submitContacto.addEventListener('click', function () {
                 <button type="button" class="enviar" id="enviar-info" onclick="enviarConsulta(this)">Enviar</button>
             </div>
         </div>`
-        formInfo.classList.toggle('aaa')
+        formInfo.classList.toggle('formulario-info')
         formInfo.classList.toggle('formulario-content-info')
         info.appendChild(element)
         

@@ -82,7 +82,7 @@ fetch('db/promotores.json')
                 <div class="promotor-imagen">
                     <img src="${item.imagen}" alt="">
                 </div>
-                <div>
+                <div class="promotor-descripcion">
                     <h3>${item.nombre} ${item.apellido}</h3>
                     <p>Promotor de la provincia de ${item.provincia}</p>
                     <p>${item.profesion}</p>
@@ -190,7 +190,7 @@ submitContacto.addEventListener('click', function () {
                 <button type="button" class="enviar" id="enviar-info" onclick="enviarConsulta(this)">Enviar</button>
             </div>
         </div>`
-        formInfo.classList.toggle('aaa')
+        formInfo.classList.toggle('formulario-info')
         formInfo.classList.toggle('formulario-content-info')
         info.appendChild(element)
         
@@ -248,17 +248,16 @@ const forecast = (api) => {
     .then(data => data.json())
     .then(info =>{
         let days = info.forecast.forecastday
-        let abc = new Date()
-        let cba = abc.getDay()
-        for (const day of days) {
-            let condition = day.day.condition.text
-            let date = new Date(day.date)
+        for (const dayIn in days) {
+            console.log(dayIn);
+            let condition = days[dayIn].day.condition.text
+            let date = new Date(days[dayIn].date)
             let dia = date.getUTCDay()
             let getIcon = icons[condition]
             forecastElement.innerHTML += `
             <div class="item" >
                 <div class="day">
-                    ${cba === dia ? "Hoy" : dias[dia]}
+                    ${dayIn == 0 ? "Hoy" : dias[dia]}
                 </div>
                 <div class="icon">
                     <i class="bi bi-${getIcon}"></i>
@@ -266,16 +265,16 @@ const forecast = (api) => {
                 <div class="temperatura">
                     <div class="description">
                         <p>Max</p>
-                        <p>${day.day.maxtemp_c}°</p>
+                        <p>${days[dayIn].day.maxtemp_c}°</p>
                     </div>
                     <div class="description">
                         <p>Min</p>
-                        <p>${day.day.mintemp_c}°</p>
+                        <p>${days[dayIn].day.mintemp_c}°</p>
                     </div>
                 </div>
                 <div class="precipitacion" >
                     <i class="bi bi-umbrella"></i> 
-                    <p>${day.day.daily_chance_of_rain}%</p>
+                    <p>${days[dayIn].day.daily_chance_of_rain}%</p>
                 </div>
             </div>
             `

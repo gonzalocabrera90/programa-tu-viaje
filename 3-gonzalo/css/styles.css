@@ -79,6 +79,7 @@ a {
     top: 30%;
     left: -35%;
     animation-name: titulo;
+    animation-delay: 1s;
     animation-duration: 2s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -404,8 +405,8 @@ a {
 
 /* PROMOTORES */
 .promotores {
-    margin-top: 30px;
-    height: 90vh;
+    margin-top: 10vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -437,7 +438,9 @@ a {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
     transition-duration: .3s;
 }
-
+.promotor-descripcion{
+    text-align: center;
+}
 .promotor-imagen:hover {
     transform: scale(1.1);
 }
@@ -469,7 +472,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .formulario-content, .formulario-content-info {
@@ -480,7 +483,7 @@ button {
     justify-content: center;
     gap: 10px;
 }
-.aaa {  
+.formulario-info {  
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -511,7 +514,7 @@ button {
 .tarjeta-info{
     position: absolute;
     transform: translateY(35%);
-    background-color: aquamarine;
+    background-color: #b9b9b9;
     width: 360px;
     height: 240px;
     border-radius: 15px;
@@ -527,7 +530,7 @@ button {
     animation-fill-mode: forwards;
 }
 .card{
-    background-color: aquamarine;
+    background-color: #b9b9b9;
     width: 100%;
     height: 100%;
     display: flex;
@@ -556,7 +559,7 @@ button.contactarme {
 .tarjeta-info-hide{
     position: absolute;
     transform: translateY(35%);
-    background-color: aquamarine;
+    background-color: #b9b9b9;
     width: 360px;
     height: 240px;
     border-radius: 15px;
@@ -617,6 +620,9 @@ select {
     padding: 0 15px;
     border: none;
     border-bottom: 1px solid black;
+}
+input:focus, select:focus{
+    outline-color: #ffa500;
 }
 
 .enviar-content {
@@ -792,7 +798,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, blue, lightblue);
+    background: linear-gradient(180deg, #4a41ef, lightblue);
     overflow: hidden;
 }
 
@@ -850,23 +856,20 @@ footer {
     justify-content: space-around;
 }
 
-#pronostico::-webkit-scrollbar {
-    width: 12px;
-    /* width of the entire scrollbar */
-}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
 
-#pronostico::-webkit-scrollbar-track {
-    background: rgb(209, 207, 207);
-    /* color of the tracking area */
 }
-
-#pronostico::-webkit-scrollbar-thumb {
-    background-color: blue;
-    /* color of the scroll thumb */
-    border-radius: 20px;
-    /* roundness of the scroll thumb */
-    border: 3px solid blue;
-    /* creates padding around scroll thumb */
+/* ::-webkit-scrollbar-button {
+    background: #4a41ef
+} */
+::-webkit-scrollbar-track-piece {
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    background: #4a41ef;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 800px) {
