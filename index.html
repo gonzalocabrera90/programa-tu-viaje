@@ -1,16 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Programa Tu Viaje</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" href="./faviconn.ico" type="image/x-icon">
 </head>
-<body>
-    
 
+<body>
+    <header>
+        <div class="logo" id="up">
+            <i class="bi bi-code-slash"></i>
+            <h1>ProgramaTuViaje.com</h1>
+        </div>
+        <div class="links">
+            <a href="#viajes">Viajes</a>
+            <a href="#promotores">Promotores</a>
+            <a href="#recomendaciones">Recomendados</a>
+            <a href="#formulario">Contacto</a>
+        </div>
+    </header>
+    <main>
+        <div class="portada">
+            <img src="https://www.driva.com.au/static/9a2526e1892a71769c5d1f2b2f4040c6/6b6b2/92ccd044-7d69-4fbd-a51f-f03329a7b248_eddy-billard-Y8lhl6j_OUU-unsplash.jpg"
+                alt="" srcset="">
+                <h1 class="portada-title">Encontra <br> tu viaje <br> al mejor precio.</h1>
+        </div>
+
+
+        <div class="servicios">
+            <div class="servicios-container">
+                <div class="servicios-portada">
+                    <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2018/03/16/5fa43742c02c6.jpeg"
+                        alt="" srcset="">
+                </div>
+                <div class="servicios-position">
+                    <div class="servicios-head">
+                        <h2>Argentina</h2>
+                    </div>
+                    <div class="servicios-content">
+                        <div class="servicios-item">
+                            <h3>Personaliza <br>
+                                tu viaje</h3>
+                            <p>En nuestra agencia de viajes, te brindamos la oportunidad de personalizar la elección de
+                                destinos, alojamiento, actividades y tours, hasta la selección de restaurantes y
+                                transporte.</p>
+                        </div>
+                        <div class="servicios-item">
+                            <h3>Descuentos <br>
+                                exclusivos</h3>
+                            <p>¡Aprovecha nuestros descuentos exclusivos en viajes y vive la aventura al mejor precio!
+                                Disfruta de promociones en vuelos, hoteles y paquetes turísticos seleccionados. Descubre
+                                nuevos destinos.</p>
+                            <!-- ¡No te pierdas la oportunidad de viajar por menos! -->
+                        </div>
+                        <div class="servicios-item">
+                            <h3>Atencion<br>
+                                pre viaje</h3>
+                            <p>Ofrecemos atención personalizada para que disfrutes al máximo de tu experiencia en cada
+                                destino. ¡Viaja con tranquilidad sabiendo que estamos aquí para ayudarte en todo lo que
+                                necesites!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="recomendaciones" class="recomendaciones">
+            <div class="recomendaciones-titulo">
+                <h3 class="titulo-seccion">Nuestras Recomendaciones</h3>
+            </div>
+            <div class="recomendaciones-content">
+
+            </div>
+        </div>
+        <div id="viajes" class="viajes">
+            <div class="viajes-titulo">
+                <h3 class="titulo-seccion" >Inspiracion para futuras escapadas.</h3>
+            </div>
+            <div class="viajes-content">
+
+            </div>
+        </div>
+        <div class="promotores">
+            <div class="formulario-description">
+                <h3 class="titulo-seccion" >Promotores</h3>
+            </div>
+            <div id="promotores" class="promotores-content">
+            </div>
+        </div>
+        <div id="formulario" class="formulario">
+            <div class="formulario-description">
+                <h3 class="titulo-seccion" >Completa el formulario para recibir todos nuestros viajes.</h3>
+            </div>
+            <div class="formulario-content">
+                <div class="data-user-uno">
+                    <div class="data-user-uno-content">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="" id="nombre">
+                    </div>
+                    <div class="data-user-uno-content">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="" id="apellido">
+                    </div>
+                </div>
+                <div class="data-user-dos">
+                    <label for="email">Email:</label>
+                    <input type="text" name="" id="email">
+                </div>
+                <div class="enviar-content">
+                    <button type="button" class="enviar" id="enviar">Enviar</button>
+                    <p id="warning"></p>
+                </div>
+            </div>
+        </div>
+        <div id="info" class="formulario">
+            <div class="formulario-description">
+                <h3 class="titulo-seccion" >Contacte a uno de nuestros promotores para más información</h3>
+            </div>
+            <div class="formulario-content-info">
+                <div class="data-user-uno">
+                    <div class="data-user-uno-content">
+                        <label for="nombre-info">Nombre:</label>
+                        <input type="text" name="" id="nombre-info">
+                    </div>
+                    <div class="data-user-uno-content">
+                        <label for="apellido-info">Apellido:</label>
+                        <input type="text" name="" id="apellido-info">
+                    </div>
+                </div>
+                <div class="data-user-uno">
+                    <div class="data-user-uno-content">
+                        <label for="email-info">Email:</label>
+                        <input type="text" name="" id="email-info">
+                    </div>
+                    <div class="data-user-uno-content">
+                        <label for="telefono-info">Telefono:</label>
+                        <input type="text" name="" id="telefono-info">
+                    </div>
+
+                </div>
+                <div class="data-user-uno">
+                    <div class="data-user-uno-content">
+                        <label for="select-promotor">Promotor:</label>
+                        <select id="select-promotor">
+                            <option value="Daniel de Cordoba">Daniel de Cordoba</option>
+                            <option value="Melina de Catamarca">Melina de Catamarca</option>
+                            <option value="Gonzalo de Buenos Aires">Gonzalo de Buenos Aires</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="enviar-content">
+                    <button type="button" class="enviar" id="enviar-info">Guardar</button>
+                </div>
+                <div class="enviar-content">
+                    <p id="warning-info"></p>
+                </div>
+            </div>
+           
+        </div>
+        <section>
+            <div id="pronostico" ></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-nav">
+            <div>
+                <a href="#up" class="logo name">
+                    <i class="bi bi-code-slash"></i>
+                    <h1>ProgramaTuViaje.com</h1>
+                </a>
+            </div>
+            <div class="links">
+                <a href="#viajes">Viajes</a>
+                <a href="#promotores">Promotores</a>
+                <a href="#recomendaciones">Recomendados</a>
+                <a href="#formulario">Contacto</a>
+            </div>
+        </div>
+        <div class="icons-red-social">
+            <a target="_blank" href="https://github.com/gonzalocabrera90/programa-tu-viaje">
+                <i class="bi bi-github"></i></i>
+            </a>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-youtube"></i>
+        </div>
+        <div class="footer-copyright">
+            <p>Programa tu viaje es propiedad del grupo 13.</p>
+            <p>En colaboracion con Argentina Programa.</p>
+            <p>Todos los derechos reservados.</p>
+            <p>Trabajo practico integrador.</p>
+        </div>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
