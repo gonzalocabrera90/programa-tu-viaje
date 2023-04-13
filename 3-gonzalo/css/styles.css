@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -49,13 +53,13 @@ header .links {
 a {
     text-decoration: none;
     color: rgb(61, 61, 59);
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 /* CONTENT */
 /* PORTADA */
 .portada {
-    height: 80vh;
+    height: 100vh;
     position: relative;
     background-color: #af9272;
 }
@@ -66,6 +70,111 @@ a {
     width: -webkit-fill-available;
 }
 
+.portada-title {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 4.6vw;
+    text-shadow: 0 0 15px black;
+    z-index: 1;
+    top: 30%;
+    left: -35%;
+    animation-name: titulo;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes titulo {
+    0% {
+        left: -30%;
+        color: rgba(0, 0, 0, 0.455);
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+/* SERVICIOS */
+.servicios {
+    position: static;
+    height: 80vh;
+}
+
+.servicios-container {
+    height: 80vh;
+    position: relative;
+}
+
+.servicios-portada {
+    height: 100%;
+}
+
+.servicios-portada img {
+    object-fit: cover;
+    height: 100%;
+    width: -webkit-fill-available;
+}
+
+.servicios-head {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    text-shadow: -3px 5px 5px black
+}
+
+.servicios-content {
+    width: 80%;
+    height: 48%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.servicios-item {
+    width: 28%;
+    height: 80%;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1E1E1E66;
+    border-radius: 8px;
+    box-shadow: 0 0 10px white;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-size: 2em;
+    padding: 0 15px;
+    text-align: center;
+}
+.servicios-item h3 {
+    color: white;
+    font-size: 0.9em;
+}
+
+.servicios-descriptcion {
+    display: flex;
+}
+
+.servicios-item p {
+    color: white;
+    font-size: 0.8em;
+}
+
 /* recomendaciones */
 .recomendaciones {
     height: 90vh;
@@ -74,6 +183,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 30px;
 }
 
 .recomendaciones-titulo {
@@ -107,6 +217,11 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    transition-duration: .6s;
+}
+
+.recomendacion:hover {
+    transform: scale(1.1);
 }
 
 .recomendacion-imagen {
@@ -174,11 +289,16 @@ a {
 .viaje {
     width: 18vw;
     height: 85%;
+    gap: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition-duration: .3s;
+}
 
+.viaje:hover {
+    transform: scale(1.1);
 }
 
 .viaje-imagen {
@@ -200,10 +320,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 20px;
 }
 
 .viaje-head div {
     height: 30%;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -220,7 +342,9 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+    gap: 30px;
 }
 
 .viajes h3 {
@@ -229,83 +353,6 @@ a {
 
 .viajes p {
     text-align: center;
-}
-
-
-
-/* SERVICIOS */
-.servicios {
-    position: static;
-    height: 80vh;
-}
-
-.aaa {
-    height: 80vh;
-    position: relative;
-}
-
-.servicios-portada {
-    height: 100%;
-}
-
-.servicios-portada img {
-    object-fit: cover;
-    height: 100%;
-    width: -webkit-fill-available;
-}
-
-.servicios-head {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-size: 3em;
-    text-shadow: -3px 5px 5px black
-}
-
-.servicios-content {
-    width: 80%;
-    height: 48%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.servicios-item {
-    width: 28%;
-    height: 80%;
-    font-size: 1.1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #1E1E1E66;
-    border-radius: 8px;
-    box-shadow: 0 0 10px white;
-    text-align: center;
-}
-
-.servicios-item h3 {
-    color: white;
-    font-size: 2vw;
-}
-
-.servicios-descriptcion {
-    display: flex;
-}
-
-.servicios-item p {
-    color: white;
-    font-size: 1.4vw;
 }
 
 @media screen and (max-width: 800px) {
@@ -338,7 +385,7 @@ a {
     }
 
     .servicios-item p {
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
 
     .viajes-content p {
@@ -357,10 +404,12 @@ a {
 
 /* PROMOTORES */
 .promotores {
+    margin-top: 30px;
     height: 90vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .promotores-content {
@@ -386,6 +435,25 @@ a {
     justify-content: center;
     border-radius: 50%;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
+    transition-duration: .3s;
+}
+
+.promotor-imagen:hover {
+    transform: scale(1.1);
+}
+
+.info-button {
+    width: 100px;
+    transition-duration: .6s;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+.info-button:hover {
+    transform: scale(1.1);
 }
 
 .promotor-imagen img {
@@ -404,7 +472,7 @@ a {
     justify-content: space-evenly;
 }
 
-.formulario-content {
+.formulario-content, .formulario-content-info {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -412,13 +480,111 @@ a {
     justify-content: center;
     gap: 10px;
 }
+.aaa {  
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform:translate(0);
+    opacity: 1;
+    animation-name: esconder;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+#info{
+    position: relative;
+}
 
+@keyframes esconder {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-2000px);
+        height: 0%;
+    }
+}
+
+.tarjeta-info{
+    position: absolute;
+    transform: translateY(35%);
+    background-color: aquamarine;
+    width: 360px;
+    height: 240px;
+    border-radius: 15px;
+    padding: 0 20px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: mostrar;
+    animation-duration: 2.1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.card{
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 15px;
+}
+
+button.enviar {
+    width: 30%;
+}
+
+button.contactarme {
+    width: 100%;
+}
+@keyframes mostrar {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+.tarjeta-info-hide{
+    position: absolute;
+    transform: translateY(35%);
+    background-color: aquamarine;
+    width: 360px;
+    height: 240px;
+    border-radius: 15px;
+    padding: 0 20px;
+    opacity: 1;
+    animation-name: fadeout;
+    animation-duration: 2.1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.consulta-exitosa{
+    font-size: 80px;
+}
 @media screen and (max-width:800px) {
 
     .recomendaciones-content,
     .promotores-content,
     .viajes-content,
-    .formulario-content {
+    .formulario-content,
+    .formulario-content-info {
         width: 100%;
         padding: 0 5%;
         box-sizing: border-box;
@@ -445,8 +611,10 @@ a {
 
 input,
 select {
+    box-sizing: border-box;
     width: 100%;
     height: 30px;
+    padding: 0 15px;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -466,14 +634,6 @@ button {
     color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.654);
 
-}
-
-button.enviar {
-    width: 30%;
-}
-
-button.contactarme {
-    width: 100%;
 }
 
 .red-warning {
@@ -581,22 +741,30 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-
+    .titulo-seccion {
+        font-size: 1.5em;
+    }
     .viajes-content,
-    .recomendaciones-content {
+    .recomendaciones-content,
+    .promotores-content {
         flex-wrap: wrap;
         height: auto;
+        gap: 15vw;
+        margin-top: 30px;
     }
 
     .viajes,
-    .recomendaciones {
+    .recomendaciones,
+    .promotores {
         height: auto;
     }
 
     .viaje,
-    .recomendacion {
+    .recomendacion,
+    .promotor {
         width: 45%;
         min-width: 200px;
+        gap: 30px;
     }
 
     .servicios-item {
@@ -609,5 +777,108 @@ footer {
 
     .icons-red-social {
         width: 60%;
+    }
+    .tarjeta-info{
+        width: 80%;
+    }
+}
+
+
+/* PRONOSTICO */
+#pronostico {
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(20, 104, 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, blue, lightblue);
+    overflow: hidden;
+}
+
+#forecast {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 20%;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon .bi {
+    font-size: 6vw;
+}
+
+.temperatura {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.precipitacion {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.precipitacion .bi {
+    font-size: 2vw;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#pronostico::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+#pronostico::-webkit-scrollbar-track {
+    background: rgb(209, 207, 207);
+    /* color of the tracking area */
+}
+
+#pronostico::-webkit-scrollbar-thumb {
+    background-color: blue;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid blue;
+    /* creates padding around scroll thumb */
+}
+
+@media screen and (max-width: 800px) {
+    #pronostico {
+        justify-content: flex-start;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+    }
+
+    .item {
+        width: 20%;
+        min-width: 100px;
     }
 }
