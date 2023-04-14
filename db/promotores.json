@@ -3,14 +3,14 @@
         "nombre":"Daniel",
         "apellido":"Scheurer",
         "provincia":"Cordoba",
-        "profesion":"Lic. en Adm. de Empresa",
+        "profesion":"Lic. en Adm. de Empresas",
         "imagen": "https://threewill.com/wp-content/uploads/austin-ryan-full-resolution-office-365.jpg"
     },
     {
         "nombre":"Melina",
         "apellido":"Romero",
         "provincia":"Catamarca",
-        "profesion":"Fotografa Profesional",
+        "profesion":"Fotógrafa Profesional",
         "imagen": "https://uploads-ssl.webflow.com/6321fa4eb9021afb4a237ebb/63518b3451899cb324570c0e_IMA0000460000046712.jpeg"
     
     },
