@@ -49,6 +49,9 @@ header .logo {
 .logo h1 {
     color: rgb(246, 246, 241);
 }
+.logo h1:hover {
+    color: rgb(215, 215, 209);
+}
 header nav {
     display: flex;
     gap: 15px;
@@ -60,11 +63,17 @@ header .links {
     justify-content: baseline;
     gap: 5px;
 }
+header .links:hover {
+    transform: scale(1.05);
+}
 
 a {
     text-decoration: none;
     color: rgb(246, 246, 241);
     font-size: 1.3em;
+}
+a:hover {
+    color: rgb(215, 215, 209);
 }
 
 @media screen and (max-width: 880px) {
@@ -400,6 +409,9 @@ a {
 
 @media screen and (max-width: 800px) {
 
+    .portada-title {
+        font-size: 6.4vw;
+    }
     .servicios-content {
         width: 100%;
     }
@@ -770,6 +782,9 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+    .portada-title {
+        font-size: 7.3vw;
+    }
     .titulo-seccion {
         font-size: 1.5em;
     }
@@ -812,6 +827,9 @@ footer {
     }
     .tarjeta-info{
         width: 80%;
+    }
+    .name h1 {
+        font-size: 1.5em;
     }
 }
 
