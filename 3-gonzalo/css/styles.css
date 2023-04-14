@@ -153,8 +153,9 @@ a {
     justify-content: flex-start;
     background-color: #1E1E1E66;
     border-radius: 8px;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px #eee;
     text-align: center;
+    
 }
 
 .titulo-seccion {
@@ -546,6 +547,9 @@ button.enviar {
 
 button.contactarme {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @keyframes mostrar {
     0% {

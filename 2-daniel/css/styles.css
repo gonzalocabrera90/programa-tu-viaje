@@ -74,6 +74,19 @@ a {
     width: -webkit-fill-available;
 }
 
+.servicios-content p{
+    height: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    box-shadow: 0 0 2px 1px #2f35428d;
+    padding-left: 20px;
+    padding-right 20px;
+    
+}
+
 /* recomendaciones */
 .recomendaciones {
     height: 90vh;
@@ -135,6 +148,7 @@ a {
     height: 50%;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .recomendacion-descripcion h3 {
@@ -143,11 +157,23 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: #eee;
+    box-shadow: 0 0 2px 1px #2f35428d;
+    border-bottom: solid 1px #eee;
+    padding-bottom: 4px;
+    padding-top: 6px;
 }
 
 .recomendacion-descripcion p {
     height: 70%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #eee;
+    box-shadow: 0 0 2px 1px #2f35428d;
 }
 
 /* VIAJES */
@@ -222,6 +248,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .viaje-descripcion {
@@ -229,6 +259,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-top: 5px;
+    align-items: center;
 }
 
 .viajes h3 {
@@ -237,6 +269,7 @@ a {
 
 .viajes p {
     text-align: center;
+    
 }
 
 
