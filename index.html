@@ -9,34 +9,49 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Programa Tu Viaje</title>
     <link rel="icon" href="./faviconn.ico" type="image/x-icon">
+
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="logo" id="up">
             <i class="bi bi-code-slash"></i>
             <h1>ProgramaTuViaje.com</h1>
         </div>
-        <div class="links">
-            <a href="#viajes">Viajes</a>
-            <a href="#promotores">Promotores</a>
-            <a href="#recomendaciones">Recomendados</a>
-            <a href="#formulario">Contacto</a>
-        </div>
+        <nav>
+            <div class="links">
+                <a href="#recomendaciones" class="link-name">Recomendados</a>
+                <a href="#recomendaciones" class="link-icon"><i class="bi bi-award"></i></a>
+
+            </div>
+            <div class="links">
+                <a href="#viajes" class="link-name">Viajes</a>
+                <a href="#viajes" class="link-icon"><i class="bi bi-airplane"></i></a>
+            </div>
+            <div class="links">
+                <a href="#promotores" class="link-name">Promotores</a>
+                <a href="#promotores" class="link-icon"><i class="bi bi-person-circle"></i></a>
+
+            </div>
+            <div class="links">
+                <a href="#formulario" class="link-name">Contacto</a>
+                <a href="#formulario" class="link-icon"><i class="bi bi-envelope"></i></a>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="portada">
-            <img src="https://www.driva.com.au/static/9a2526e1892a71769c5d1f2b2f4040c6/6b6b2/92ccd044-7d69-4fbd-a51f-f03329a7b248_eddy-billard-Y8lhl6j_OUU-unsplash.jpg"
-                alt="" srcset="">
-                <h1 class="portada-title">Encontra <br> tu viaje <br> al mejor precio.</h1>
+            <img src="https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80"
+                alt="Montaña">
+            <h1 class="portada-title">Encontra <br> tu viaje <br> al mejor precio.</h1>
         </div>
 
 
         <div class="servicios">
             <div class="servicios-container">
                 <div class="servicios-portada">
-                    <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2018/03/16/5fa43742c02c6.jpeg"
-                        alt="" srcset="">
+                    <img src="https://images.unsplash.com/photo-1613495132547-16b73d2da561?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+                        alt="Argentina">
                 </div>
                 <div class="servicios-position">
                     <div class="servicios-head">
@@ -81,7 +96,7 @@
         </div>
         <div id="viajes" class="viajes">
             <div class="viajes-titulo">
-                <h3 class="titulo-seccion" >Inspiracion para futuras escapadas.</h3>
+                <h3 class="titulo-seccion">Inspiracion para futuras escapadas.</h3>
             </div>
             <div class="viajes-content">
 
@@ -89,14 +104,14 @@
         </div>
         <div class="promotores">
             <div class="formulario-description">
-                <h3 class="titulo-seccion" >Promotores</h3>
+                <h3 class="titulo-seccion">Promotores</h3>
             </div>
             <div id="promotores" class="promotores-content">
             </div>
         </div>
         <div id="formulario" class="formulario">
             <div class="formulario-description">
-                <h3 class="titulo-seccion" >Completa el formulario para recibir todos nuestros viajes.</h3>
+                <h3 class="titulo-seccion">Completa el formulario para recibir todos nuestros viajes.</h3>
             </div>
             <div class="formulario-content">
                 <div class="data-user-uno">
@@ -121,7 +136,7 @@
         </div>
         <div id="info" class="formulario">
             <div class="formulario-description">
-                <h3 class="titulo-seccion" >Contacte a uno de nuestros promotores para más información</h3>
+                <h3 class="titulo-seccion">Contacte a uno de nuestros promotores para más información</h3>
             </div>
             <div class="formulario-content-info">
                 <div class="data-user-uno">
@@ -162,10 +177,10 @@
                     <p id="warning-info"></p>
                 </div>
             </div>
-           
+
         </div>
         <section>
-            <div id="pronostico" ></div>
+            <div id="pronostico"></div>
         </section>
     </main>
     <footer>

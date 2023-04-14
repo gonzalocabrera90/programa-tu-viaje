@@ -163,8 +163,9 @@ a {
     text-align: center;
 }
 .servicios-item h3 {
-    color: white;
-    font-size: 0.9em;
+    color: #eee;
+    font-size: 2vw;
+    border-bottom: solid 1px #eee;
 }
 
 .servicios-descriptcion {
@@ -308,7 +309,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
+    box-shadow: 0 0 2px 1px #2f35428d;
 }
 
 .viaje-imagen img {

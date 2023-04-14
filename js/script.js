@@ -25,6 +25,17 @@ const recomendados = document.querySelector('.recomendaciones-content');
 const viajesElement = document.querySelector('.viajes-content');
 const promotoresElement = document.getElementById('promotores');
 
+const myNav = document.querySelector('header');
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200  ) {
+        myNav.classList.add("header-con-color");
+        myNav.classList.remove("header-transparente");
+    } 
+    else {
+        myNav.classList.add("header-transparente");
+        myNav.classList.remove("header-con-color");
+    }
+};
 
 //fetch a db json de los viajes recomendados
 fetch('db/recomendados.json')
@@ -249,7 +260,6 @@ const forecast = (api) => {
     .then(info =>{
         let days = info.forecast.forecastday
         for (const dayIn in days) {
-            console.log(dayIn);
             let condition = days[dayIn].day.condition.text
             let date = new Date(days[dayIn].date)
             let dia = date.getUTCDay()

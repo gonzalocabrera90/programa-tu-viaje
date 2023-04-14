@@ -15,14 +15,20 @@ img {
 header {
     width: 100%;
     height: 60px;
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 5;
+    color: rgb(246, 246, 241);
 }
-
+.header-con-color { 
+    background-color: rgb(34, 31, 31); 
+}
+.header-transparente { 
+    background-color: transparent;
+}
 .logo {
     display: flex;
     gap: 10px;
@@ -41,19 +47,54 @@ header .logo {
 }
 
 .logo h1 {
-    color: rgb(61, 61, 59);
+    color: rgb(246, 246, 241);
 }
-
-header .links {
+header nav {
     display: flex;
     gap: 15px;
     margin-right: 20px;
 }
+header .links {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 5px;
+}
 
 a {
     text-decoration: none;
-    color: rgb(61, 61, 59);
-    font-size: 1.2em;
+    color: rgb(246, 246, 241);
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 880px) {
+    a.link-name {
+        display: none;
+    }
+    header nav {
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    header .logo {
+        margin-left: 0;
+    }
+
+    .logo i {
+        font-size: 5vw;
+    }
+
+    .logo h1 {
+        font-size: 5vw;
+    }
+
+    header .links {
+        display: none;
+    }
 }
 
 /* CONTENT */
@@ -163,8 +204,9 @@ a {
     text-align: center;
 }
 .servicios-item h3 {
-    color: white;
-    font-size: 0.9em;
+    color: #eee;
+    font-size: 1.8vw;
+    border-bottom: solid 1px #eee;
 }
 
 .servicios-descriptcion {
@@ -230,7 +272,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
+    box-shadow: 0 0 2px 1px #2f35428d;
 }
 
 .recomendacion-imagen img {
@@ -308,7 +350,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
+    box-shadow: 0 0 2px 1px #2f35428d;
 }
 
 .viaje-imagen img {
@@ -357,25 +399,6 @@ a {
 }
 
 @media screen and (max-width: 800px) {
-    header {
-        justify-content: center;
-    }
-
-    header .logo {
-        margin-left: 0;
-    }
-
-    .logo i {
-        font-size: 3.5vw;
-    }
-
-    .logo h1 {
-        font-size: 3.5vw;
-    }
-
-    header .links {
-        display: none;
-    }
 
     .servicios-content {
         width: 100%;
@@ -776,6 +799,9 @@ footer {
     .servicios-item {
         justify-content: center;
     }
+    .servicios-item p {
+        font-size: 2.1vw;
+    };
 
     .footer-nav a {
         font-size: 0.8em;
