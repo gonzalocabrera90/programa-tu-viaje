@@ -27,7 +27,7 @@ header {
     gap: 10px;
     font-size: 14px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 header .logo {
@@ -41,25 +41,38 @@ header .logo {
 
 .logo h1 {
     color: #eee;
+    font-size: .9em;
+}
+
+.logo h1:hover{
+    color: aqua;
+    transition: ease-in .5s;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
 }
 
 .links {
     display: flex;
-    gap: 15px;
+    gap: 5px;
     margin-right: 20px;
+    font-size: .9em;
 }
 
 a {
     text-decoration: none;
     color: #eee;
-    font-size: 1.4em;
+    font-size: .9em;
 }
 
 .links i{
     text-decoration: none;
     color: #eee;
-    font-size: 1.4em;
+    font-size: .9em;
 }
+
 /* CONTENT */
 /* PORTADA */
 .portada {
@@ -74,6 +87,16 @@ a {
     width: -webkit-fill-available;
 }
 
+.servicios-content p{
+    height: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+
 /* recomendaciones */
 .recomendaciones {
     height: 90vh;
@@ -82,6 +105,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding-top: 10px;
 }
 
 .recomendaciones-titulo {
@@ -135,6 +159,7 @@ a {
     height: 50%;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .recomendacion-descripcion h3 {
@@ -143,11 +168,23 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: #eee;
+    box-shadow: 0 0 2px 1px #2f35428d;
+    border-bottom: solid 1px #eee;
+    padding-bottom: 4px;
+    padding-top: 6px;
 }
 
 .recomendacion-descripcion p {
     height: 70%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #eee;
+    box-shadow: 0 0 2px 1px #2f35428d;
 }
 
 /* VIAJES */
@@ -222,6 +259,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .viaje-descripcion {
@@ -229,6 +270,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-top: 5px;
+    align-items: center;
 }
 
 .viajes h3 {
@@ -237,6 +280,7 @@ a {
 
 .viajes p {
     text-align: center;
+    
 }
 
 
@@ -379,6 +423,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
 }
 
 .promotor {
@@ -395,76 +440,38 @@ a {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.654);
+    box-shadow: 0 0 2px 1px #2f35428d;
 }
 
 .promotor-imagen img {
     width: 100%;
     object-fit: contain;
     border-radius: 50%;
-
+    box-shadow: 0 0 2px 1px #2f35428d;
 }
-
-
-
-/* FORMULARIO DE PRUEBA */
-
-.planilla{
-    background: url(https://unsplash.com/es/fotos/KLFVQgcLoZ8);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 100px 40px;
-    text-align: center;
-    color: white;
-}
-
-.planilla p{
-    max-width: 600px;
-    margin: 40px auto;
-    font-size: 15px;
-    font-weight: 300;
-}
-
-.cajaEmail{
-    height: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.cajaEmail i{
-    background: #2f3542;
-    width: 40px;
-    line-height: 40px;
-}
-
-.cajita, .btn{
-    border: none;
-    outline: none;
-}
-
-.cajita{
-    width: 260px;
-    padding: 0 10px;
-}
-
-.btn{
-    background: #2f3542;
-    color: white;
-    padding: 0 10px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
 
 
 /* FORMULARIO */
+
 .formulario {
-    height: 80vh;
+    height: 100vh;
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    box-shadow: 0 5px 5px #abb2b9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.formulario h3{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: left;
+    color: #2f4f4f;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
 }
 
 .formulario-content {
@@ -472,9 +479,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
 }
+
+
 
 @media screen and (max-width:800px) {
 
@@ -517,13 +527,16 @@ select {
 .enviar-content {
     width: 80%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 button.enviar {
     width: 30%;
     height: 30px;
+    align-items: ;
 }
 
 .red-warning {
@@ -578,6 +591,7 @@ footer {
 .footer-nav .logo h1 {
     color: white;
 }
+
 
 @media screen and (max-width: 600px) {
 
