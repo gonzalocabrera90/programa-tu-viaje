@@ -25,9 +25,20 @@ const recomendados = document.querySelector('.recomendaciones-content');
 const viajesElement = document.querySelector('.viajes-content');
 const promotoresElement = document.getElementById('promotores');
 
+const myNav = document.querySelector('header');
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200  ) {
+        myNav.classList.add("header-con-color");
+        myNav.classList.remove("header-transparente");
+    } 
+    else {
+        myNav.classList.add("header-transparente");
+        myNav.classList.remove("header-con-color");
+    }
+};
 
 //fetch a db json de los viajes recomendados
-fetch('/db/recomendados.json')
+fetch('db/recomendados.json')
     .then(data => data.json())
     .then(cities => {
         for (const city of cities) {
@@ -45,7 +56,7 @@ fetch('/db/recomendados.json')
         }
     })
 //fetch a db json de los viajes como productos disponnibles
-    fetch('/db/viajes.json')
+    fetch('db/viajes.json')
     .then(data => data.json())
     .then(viajes => {
         for (const viaje of viajes) {
@@ -73,7 +84,7 @@ fetch('/db/recomendados.json')
     })
 
 //fetch a db json de los promotores y dueños del proyecto
-fetch('/db/promotores.json')
+fetch('db/promotores.json')
 .then(data => data.json())
 .then(lista => {
     for (const item of lista) {
@@ -82,7 +93,7 @@ fetch('/db/promotores.json')
                 <div class="promotor-imagen">
                     <img src="${item.imagen}" alt="">
                 </div>
-                <div class="promotor-descripcion" >
+                <div class="promotor-descripcion">
                     <h3>${item.nombre} ${item.apellido}</h3>
                     <p>Promotor de la provincia de ${item.provincia}</p>
                     <p>${item.profesion}</p>
@@ -212,8 +223,7 @@ submitContacto.addEventListener('click', function () {
 // var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 // }
 
-const API = "http://api.weatherapi.com/v1/forecast.json?key=9a179446b6644d8ea15170701230604&q=Argentina&days=10&aqi=no&alerts=no"
-
+const API = "https://api.weatherapi.com/v1/forecast.json?key=9a179446b6644d8ea15170701230604&q= argentina buenos aires&days=10&aqi=no&alerts=no"
 const forecastElement = document.getElementById('pronostico')
 
 const posibilidades = ["Patchy rain possible", "Clear", "Partly cloudy", "Cloudy", "Mist", "Overcast", "Sunny", "Light rain shower", "Heavy rain", "Moderate rain", "Fog","Moderate or heavy rain shower", "Patchy light drizzle", "Light rain shower"]
@@ -249,17 +259,15 @@ const forecast = (api) => {
     .then(data => data.json())
     .then(info =>{
         let days = info.forecast.forecastday
-        let abc = new Date()
-        let cba = abc.getDay()
-        for (const day of days) {
-            let condition = day.day.condition.text
-            let date = new Date(day.date)
+        for (const dayIn in days) {
+            let condition = days[dayIn].day.condition.text
+            let date = new Date(days[dayIn].date)
             let dia = date.getUTCDay()
             let getIcon = icons[condition]
             forecastElement.innerHTML += `
             <div class="item" >
                 <div class="day">
-                    ${cba === dia ? "Hoy" : dias[dia]}
+                    ${dayIn == 0 ? "Hoy" : dias[dia]}
                 </div>
                 <div class="icon">
                     <i class="bi bi-${getIcon}"></i>
@@ -267,16 +275,16 @@ const forecast = (api) => {
                 <div class="temperatura">
                     <div class="description">
                         <p>Max</p>
-                        <p>${day.day.maxtemp_c}°</p>
+                        <p>${days[dayIn].day.maxtemp_c}°</p>
                     </div>
                     <div class="description">
                         <p>Min</p>
-                        <p>${day.day.mintemp_c}°</p>
+                        <p>${days[dayIn].day.mintemp_c}°</p>
                     </div>
                 </div>
                 <div class="precipitacion" >
                     <i class="bi bi-umbrella"></i> 
-                    <p>${day.day.daily_chance_of_rain}%</p>
+                    <p>${days[dayIn].day.daily_chance_of_rain}%</p>
                 </div>
             </div>
             `
