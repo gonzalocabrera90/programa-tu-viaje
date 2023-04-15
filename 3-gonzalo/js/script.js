@@ -38,7 +38,7 @@ window.onscroll = function () {
 };
 
 //fetch a db json de los viajes recomendados
-fetch('db/recomendados.json')
+fetch('../db/recomendados.json')
     .then(data => data.json())
     .then(cities => {
         for (const city of cities) {
@@ -56,7 +56,7 @@ fetch('db/recomendados.json')
         }
     })
 //fetch a db json de los viajes como productos disponnibles
-    fetch('db/viajes.json')
+    fetch('../db/viajes.json')
     .then(data => data.json())
     .then(viajes => {
         for (const viaje of viajes) {
@@ -84,7 +84,7 @@ fetch('db/recomendados.json')
     })
 
 //fetch a db json de los promotores y dueños del proyecto
-fetch('db/promotores.json')
+fetch('../db/promotores.json')
 .then(data => data.json())
 .then(lista => {
     for (const item of lista) {
